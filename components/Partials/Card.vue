@@ -9,13 +9,7 @@ interface Props {
   price: number
 }
 
-const { img, location, address, duration, price } = withDefaults(defineProps<Props>(), {
-  img: 'https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary-1200x675.webp',
-  location: '',
-  address: '',
-  duration: 0,
-  price: 0,
-})
+const { img = 'https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary-1200x675.webp', location, address, duration, price } = defineProps<Props>()
 
 function formatDays(days: number): string {
   if (days <= 7) {

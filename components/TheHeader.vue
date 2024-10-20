@@ -15,6 +15,14 @@ watch(
     }
   },
 )
+const { locale, locales, setLocale } = useI18n()
+function langSwitcher(locale: any) {
+  setLocale(locale.code)
+  document.documentElement.setAttribute('dir', locale.dir)
+}
+const availableLocales = computed(() => {
+  return locales.value.filter(i => i.code !== locale.value)
+})
 </script>
 
 <template>
@@ -33,9 +41,14 @@ watch(
           </li>
         </ul>
 
-        <PartialsButton>
-          Sign in
-        </PartialsButton>
+        <div>
+          <PartialsButton>
+            Sign in
+          </PartialsButton>
+          <button v-for="localeVal in availableLocales" :key="localeVal.code" @click.prevent="langSwitcher(localeVal)">
+            {{ localeVal.code }}
+          </button>
+        </div>
       </div>
     </nav>
   </header>

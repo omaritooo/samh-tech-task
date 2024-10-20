@@ -7,6 +7,7 @@ interface Props {
   to?: string
 }
 
+// eslint-disable-next-line unused-imports/no-unused-vars
 const props = withDefaults(defineProps<Props>(), {
   type: 'default',
   icon: '',
@@ -18,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
   <NuxtLink v-if="to" :to="to" class="bg-primary text-white text-base px-6 py-3 rounded-lg">
     <slot />
   </NuxtLink>
-  <button v-else class="bg-primary text-white text-base px-5 py-3 rounded-lg w-fit">
+  <button v-else class="bg-primary text-white text-base px-5 py-3 rounded-lg w-fit h-fit max-h-12">
     <Icon v-if="icon" :icon width="24" height="24" />
     <slot />
   </button>

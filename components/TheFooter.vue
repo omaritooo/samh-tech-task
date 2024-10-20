@@ -1,14 +1,4 @@
 <script setup lang="ts">
-const footerContent = [{
-  title: 'About',
-  content: ['About GooseFlight', 'How it works', 'Blog', 'Forum'],
-}, {
-  title: 'Support',
-  content: ['About GooseFlight', 'How it works', 'Blog', 'Forum'],
-}, {
-  title: 'Get The App',
-  content: ['About GooseFlight', 'How it works', 'Blog', 'Forum'],
-}]
 </script>
 
 <template>
