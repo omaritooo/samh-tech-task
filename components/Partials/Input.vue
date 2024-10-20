@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<Props>(), {
   placeholder: 'Please enter text',
 })
 
-const inputModel = defineModel()
+const inputModel = defineModel('')
 </script>
 
 <template>

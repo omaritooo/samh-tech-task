@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n'],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@nuxt/test-utils/module'],
   css: ['~/assets/css/main.css', '~/assets/css/inputs.css'],
   i18n: {
     locales: [
