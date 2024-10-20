@@ -27,21 +27,21 @@ const availableLocales = computed(() => {
 
 <template>
   <header>
-    <nav class="flex flex-col md:flex-row container mx-auto md:items-center py-2 px-4 md:px-0">
+    <nav class="container flex flex-col px-4 py-2 mx-auto md:flex-row md:items-center md:px-0">
       <div class="flex justify-start gap-x-16">
         <button class="block md:hidden" @click="showMenuItems = !showMenuItems">
           <Icon icon="quill:hamburger" width="32" height="32" />
         </button>
         <PartialsLogo />
       </div>
-      <div v-if="showMenuItems" class="flex flex-col gap-y-4 md:flex-row justify-evenly flex-1 my-auto md:items-center">
-        <ul class=" flex flex-col md:flex-row gap-2 flex-1 justify-center text-base gap-x-12">
+      <div v-if="showMenuItems" class="flex flex-col flex-1 my-auto gap-y-4 md:flex-row justify-evenly md:items-center">
+        <ul class="flex flex-col justify-center flex-1 gap-2 text-base  md:flex-row gap-x-12">
           <li v-for="item in list" :key="item">
             {{ item }}
           </li>
         </ul>
 
-        <div>
+        <div class="flex gap-x-2">
           <PartialsButton>
             Sign in
           </PartialsButton>
